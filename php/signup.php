@@ -14,7 +14,7 @@ include("config.php");
  // Define variables and initialize with empty values
 $username = $_POST['username'];
 $password = $_POST['password'];
-$hash_password = password_hash($password, PASSWORD_DEFAULT);
+// $hash_password = password_hash($password, PASSWORD_DEFAULT);
 $email = $_POST['email'];
 $confirm_password = $_POST['confirm_password'];
 
@@ -23,6 +23,7 @@ $confirm_password = $_POST['confirm_password'];
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {   
         if($password == $confirm_password){
+            $hash_password = md5($password);
             $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
             if(mysqli_query($link, $sql))
             {
