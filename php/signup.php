@@ -18,7 +18,6 @@ $password = $_POST['password'];
 $email = $_POST['email'];
 $confirm_password = $_POST['confirm_password'];
 
-
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {   
@@ -27,16 +26,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
             if(mysqli_query($link, $sql))
             {
-                    header("location: ../templates/signup.html");    
+                header("location: ../templates/signup.html");    
             }
-            else{
-                    echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
-                }
+            else
+            {
+                echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
+            }
             }
         else{
             header("location: ../templates/signup.html");
             echo "<h1>Oops! Please check you password </h1>";
-        }
+            }
 }
 mysqli_close($link);
 ?>

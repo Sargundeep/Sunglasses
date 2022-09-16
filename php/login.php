@@ -19,9 +19,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $rows = mysqli_num_rows($result);
     echo "<h1>$rows</h1>";
     if($rows == 1){
-        echo "<h1>Hi</h1>";
-	    $_SESSION['username'] = $username;
-	    header("location: ../templates/index.html");
+        if($username == "Admin" and $password == "abc123sungla")
+        {
+            $_SESSION['username'] = $username;
+	        header("location: ../templates_admin/index.html");
+        }
+        else{
+	        $_SESSION['username'] = $username;
+	        header("location: ../templates/index.html");
+        }
     }
     else{
         echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
