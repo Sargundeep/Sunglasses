@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $sql = "INSERT INTO products (product_name, description ,product_img , price) VALUES ('$name', '$desc' , '$image','$price')";  
     if(mysqli_query($link, $sql))
     {
-        header("location: ../templates_admin/glasses.html");    
+        header("location: glasses.php");    
     }
     else
     {

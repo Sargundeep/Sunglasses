@@ -10,7 +10,6 @@ define('DB_NAME', 'sungla');
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 // Check connection
 if($link){
-    echo "<h1>Success</h1>";
 }
 else{
     die("ERROR: Could not connect. " . mysqli_connect_error());

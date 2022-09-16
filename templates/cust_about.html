@@ -59,28 +59,25 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item ">
-                                 <a class="nav-link" href="index.html">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="glasses.html">Our Glasses</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="shop.html">Shop</a>
+                                 <a class="nav-link" href="cust_index.html">Home</a>
                               </li>
                               <li class="nav-item active">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                                 <a class="nav-link" href="cust_about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="../php/glasses_customer.php">Our Glasses</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="cust_wishlist.html">Wish List</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="cust_cart.html">My Cart</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="cust_contact.html">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="#">Login</a>
-                              </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="#">Register</a>
-                              </li>
-                              <li class="nav-item d_none sea_icon">
-                                 <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>
+                                 <a class="nav-link" href="signup.html">Signup</a>
                               </li>
                            </ul>
                         </div>
@@ -92,45 +89,26 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- contact section -->
-      <div id="contact" class="contact">
+      <!-- about section -->
+      <div class="about">
          <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <h3>Contact Us</h3>
-                        </div>
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img src="../images/about_img.png" alt="#"/></figure>
+                  </div>
                </div>
-            </div>
-         </div>
-         <div class="container-fluid">
-            <div class="map_section">
-               <div id="map">
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>About Our Shop</h2>
+                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                  </div>
+                  <a class="read_more" href="#">Read More</a>
                </div>
             </div>
          </div>
       </div>
-      </div>
-      <!-- end contact section -->
+      <!-- about section -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -165,25 +143,5 @@
       <!-- sidebar -->
       <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="../js/custom.js"></script>
-      <script>
-         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-         // Australia.
-         function initMap() {
-           var map = new google.maps.Map(document.getElementById('map'), {
-             zoom: 11,
-             center: {lat: 40.645037, lng: -73.880224},
-             });
-         
-         var image = '../images/maps-and-flags.png';
-         var beachMarker = new google.maps.Marker({
-             position: {lat: 40.645037, lng: -73.880224},
-             map: map,
-             icon: image
-           });
-         }
-      </script>
-      <!-- google map js -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-      <!-- end google map js --> 
    </body>
-</html>
+</html
