@@ -507,7 +507,7 @@ blockquote {
      text-align: center;
      /* border: #555556 solid 1px; */
      border-radius: 10px;
-     padding: 90px 0px 30px 0px;
+     padding: 30px 10px 30px 10px;
      margin-bottom: 30px;
      box-shadow: 5px 5px 15px 5px #e5dada;
 }
@@ -515,7 +515,7 @@ blockquote {
      text-align: center;
      /* border: #555556 solid 1px; */
      border-radius: 10px;
-     padding: 40px 0px 30px 0px;
+     padding: 40px 10px 30px 10px;
      margin-bottom: 30px;
      box-shadow: 5px 5px 15px 5px #e5dada;
 }
@@ -530,7 +530,7 @@ blockquote {
      color: #100d0d;
      font-size: 22px;
      line-height: 20px;
-     padding: 70px 0px 9px 0px;
+     padding: 70px 10px 9px 10px;
 }
 
 .glasses .glasses_box p {
@@ -909,3 +909,12 @@ ul.location_icon li a {
 .add_glass_btn button{
       width:40%;
  }
+ .qnty_add_cart{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     align-content: center;
+     justify-content: center;
+     align-items: center;
+     margin: 0.5rem;
+   }

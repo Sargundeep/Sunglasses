@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $sql = "SELECT password FROM users WHERE username = '$username' and password ='$hashed_password'";
     $result = mysqli_query($link,$sql);
     $rows = mysqli_num_rows($result);
-    echo "<h1>$rows</h1>";
+    
     if($rows == 1){
         if($username == "Admin" and $password == "abc123sungla")
         {

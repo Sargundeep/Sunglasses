@@ -18,6 +18,8 @@
       <link rel="stylesheet" href="../css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="../css/responsive.css">
+      <!-- Add to cart -->
+      <link rel="stylesheet" href="../css/cart_wishlist.css">
       <!-- fevicon -->
       <link rel="icon" href="../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
@@ -59,22 +61,22 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item ">
-                                 <a class="nav-link" href="cust_index.html">Home</a>
-                              </li>
-                              <li class="nav-item active ">
-                                 <a class="nav-link" href="cust_about.html">About</a>
+                                 <a class="nav-link" href="../templates/cust_index.html">Home</a>
                               </li>
                               <li class="nav-item">
+                                 <a class="nav-link" href="../templates/cust_about.html">About</a>
+                              </li>
+                              <li class="nav-item active">
                                  <a class="nav-link" href="../php/glasses_customer.php">Our Glasses</a>
+                              </li> 
+                              <li class="nav-item">
+                                 <a class="nav-link" href="../templates/cust_wishlist.html">Wish List</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="cust_wishlist.html">Wish List</a>
+                                 <a class="nav-link" href="../templates/cust_cart.html">My Cart</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="cust_cart.html">My Cart</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="cust_contact.html">Contact Us</a>
+                                 <a class="nav-link" href="../templates/cust_contact.html">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
                                  <a class="nav-link" href="signup.html">Signup</a>
@@ -89,26 +91,64 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- about section -->
-      <div class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
-                  <div class="about_img">
-                     <figure><img src="../images/about_img.png" alt="#"/></figure>
+<div class="container-fluid">
+            <div class="row">
+         <?php
+         // Create connection
+         $conn = new mysqli("localhost", "root", "abc123","sungla");
+     
+         // Check connection
+         if ($conn->connect_error) {
+             die("Connection failed: " . $conn->connect_error);
+         }
+         error_reporting(E_ERROR | E_PARSE);
+         $username = $_SESSION['username'];
+         $product_id = $_POST['product_id'];
+         $product_qnty = $_POST['product_qty'];
+         $sql = "INSERT INTO cart VALUES ('$username','$product_id','$product_qnty')";       
+         $result = $conn->query($sql);
+         $sqlfetchdata = "SELECT products.id as prod_id,products.product_name as prod_name,products.description as prod_desc,products.price as prod_price,products.product_img as prod_img,users.username as username
+                        from products , users ,cart
+                        where products.id = cart.prod_id
+                        and users.username = cart.username";
+        $result = $conn->query($sqlfetchdata);
+         if($_SERVER["REQUEST_METHOD"] == "GET")
+         {       
+            while($row = $result->fetch_assoc()) { 
+               ?>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <div class="glasses_box">
+                     <figure>
+                    <img src="<?php echo $row['prod_img'];?>" alt="#"/></figure>
+                     <h3><span class="blu">$</span><?php echo $row['prod_price'];?></h3>
+                     <p>Product Name: <?php echo $row['prod_name'];?></p>
+                     <p>Product Id: <?php echo $row['prod_id'];?></p>
+                     <p><?php echo $row['prod_desc'];?></p>
+                     <form action="my_cart.php" method="POST">
+                        <div class="qnty_add_cart">
+                           <a href="buy.php">
+                              <div class="btn-group">
+                                 <div class="cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                       <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+                                    </svg>
+                                    <span>Buy</span>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                     </form>
                   </div>
                </div>
-               <div class="col-md-7">
-                  <div class="titlepage">
-                     <h2>About Our Shop</h2>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                  </div>
-                  <a class="read_more" href="#">Read More</a>
-               </div>
+               <?php
+         }
+         }
+         mysqli_close($link);
+         ?>
             </div>
          </div>
       </div>
-      <!-- about section -->
+      <!-- end Our  Glasses section -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -123,15 +163,6 @@
                   </div>
                </div>
             </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
          </div>
       </footer>
       <!-- end footer -->
@@ -143,5 +174,5 @@
       <!-- sidebar -->
       <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="../js/custom.js"></script>
-   </body>
-</html
+</body>
+</html>
