@@ -33,64 +33,12 @@
    </head>
    <!-- body -->
    <body class="main-layout position_head">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div class="header">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo">
-                              <a href="index.html"><img src="../images/logo.png" alt="#" /></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item ">
-                                 <a class="nav-link" href="../templates/cust_index.html">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_about.html">About</a>
-                              </li>
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="../php/glasses_customer.php">Our Glasses</a>
-                              </li> 
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_wishlist.html">Wish List</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_cart.html">My Cart</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_contact.html">Contact Us</a>
-                              </li>
-                              <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="signup.html">Signup</a>
-                              </li>
-                           </ul>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
+      <?php 
+         include("includes/navbar.php");
+      ?> 
       <!-- end header inner -->
-      <!-- end header -->
+
 
       <!-- Our  Glasses section -->
       <div class="glasses">
@@ -117,7 +65,7 @@
          $sql = "SELECT * FROM products";
          $result = $conn->query($sql);
          if($_SERVER["REQUEST_METHOD"] == "GET")
-         {       
+         {  
             while($row = $result->fetch_assoc()) { 
                ?>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
@@ -130,7 +78,7 @@
                      <form action="submit_cart.php" method="POST">
                         <div class="qnty_add_cart">
                            <input type="number" name="quantity" class="form-control" placeholder="Quantity" min="1" max="1000"><br>
-                           <input type="number" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
+                           <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
                            <!-- <input type="hidden" name="username" id="" class="form-control" value="">     -->
                            <div class="btn-group">
                                  <button type="submit" class="cart">
@@ -154,21 +102,9 @@
       </div>
       <!-- end Our  Glasses section -->
       <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +01 1234567890</li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> demo@gmail.com</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+      <?php 
+         include("includes/footer.php");
+      ?> 
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="../js/jquery.min.js"></script>

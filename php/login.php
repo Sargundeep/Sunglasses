@@ -1,10 +1,11 @@
 <?php
 // Initialize the session
 session_start();
+$_SESSION['username'] = "abc";
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: ../templates/index.html");
-    exit;
+    exit();
 }
 // Include config file
 include("config.php"); 
@@ -22,13 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($username == "Admin" and $password == "abc123sungla")
         {
             $_SESSION['username'] = $username;
-            session_start();
 	        header("location: ../templates_admin/index.html");
         }
         else{
-	        $_SESSION['username'] = $username;
-            session_start();
-	        header("location: ../templates/cust_index.html");
+	        $_SESSION['username'] = "$username";
+	        header("location: ../php/cust_index.php");
+            exit();
         }
     }
     else{

@@ -12,7 +12,6 @@
     session_start();
     // Create connection
     $conn = new mysqli("localhost", "root", "abc123");
-
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -32,7 +31,7 @@
     {
         $q ="INSERT INTO sungla.cart (username,prod_id, prod_qnty) VALUES ('$username','$product_id','$product_qty')"; 
         $conn->query($q);
-        echo"Sucu";
+        
     }
     else
     {
@@ -42,6 +41,7 @@
                 and username='$username'";
         if ($conn->query($q) === TRUE) {
             echo "Record updated successfully";
+            header("location: ../php/glasses_customer.php");
           } else {
             echo "Error updating record: " . $conn->error;
           }
