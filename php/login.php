@@ -22,10 +22,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($username == "Admin" and $password == "abc123sungla")
         {
             $_SESSION['username'] = $username;
+            session_start();
 	        header("location: ../templates_admin/index.html");
         }
         else{
 	        $_SESSION['username'] = $username;
+            session_start();
 	        header("location: ../templates/cust_index.html");
         }
     }

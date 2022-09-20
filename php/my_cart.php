@@ -91,51 +91,45 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-<div class="container-fluid">
-            <div class="row">
+      <div class="glasses">
+      <div class="container-fluid">
+         <div class="row">
          <?php
-         // Create connection
          $conn = new mysqli("localhost", "root", "abc123","sungla");
-     
-         // Check connection
          if ($conn->connect_error) {
              die("Connection failed: " . $conn->connect_error);
          }
-         error_reporting(E_ERROR | E_PARSE);
-         $username = $_SESSION['username'];
-         $product_id = $_POST['product_id'];
-         $product_qnty = $_POST['product_qty'];
-         $sql = "INSERT INTO cart VALUES ('$username','$product_id','$product_qnty')";       
-         $result = $conn->query($sql);
-         $sqlfetchdata = "SELECT products.id as prod_id,products.product_name as prod_name,products.description as prod_desc,products.price as prod_price,products.product_img as prod_img,users.username as username
+         // error_reporting(E_ERROR | E_PARSE);
+         $sqlfetchdata ="SELECT products.id as prod_id,products.product_name as prod_name,products.description as prod_desc,products.price as prod_price,products.product_img as prod_img,users.username as username,cart.prod_qnty as prod_qnty
                         from products , users ,cart
                         where products.id = cart.prod_id
-                        and users.username = cart.username";
-        $result = $conn->query($sqlfetchdata);
+                        and cart.username = '$username' ";
+         $result = $conn->query($sqlfetchdata);
          if($_SERVER["REQUEST_METHOD"] == "GET")
          {       
-            while($row = $result->fetch_assoc()) { 
-               ?>
+            while($row = $result->fetch_assoc()) 
+            { 
+             ?>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
                      <figure>
-                    <img src="<?php echo $row['prod_img'];?>" alt="#"/></figure>
-                     <h3><span class="blu">$</span><?php echo $row['prod_price'];?></h3>
-                     <p>Product Name: <?php echo $row['prod_name'];?></p>
-                     <p>Product Id: <?php echo $row['prod_id'];?></p>
-                     <p><?php echo $row['prod_desc'];?></p>
+                        <img src="<?php echo $row['prod_img'];?>" alt="#"/></figure>
+                        <h3><span class="blu">$</span><?php echo $row['prod_price'];?></h3>
+                        <p>Product Name: <?php echo $row['prod_name'];?></p>
+                        <p>Product Id: <?php echo $row['prod_id'];?></p>
+                        <p><?php echo $row['prod_desc'];?></p>
                      <form action="my_cart.php" method="POST">
                         <div class="qnty_add_cart">
-                           <a href="buy.php">
+                           <input type="number" name="product_qty" id="productQty" class="form-control" placeholder="Quantity" min="1" max="1000" value="1">  
+                           <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
                               <div class="btn-group">
-                                 <div class="cart">
+                                 <button type="submit" class="cart">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                        <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
                                     </svg>
                                     <span>Buy</span>
-                                 </div>
+                                 </button>
                               </div>
-                           </a>
                         </div>
                      </form>
                   </div>
