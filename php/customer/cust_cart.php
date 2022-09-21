@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -18,6 +21,8 @@
       <link rel="stylesheet" href="../../css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="../../css/responsive.css">
+      <!-- Add to cart -->
+      <link rel="stylesheet" href="../../css/cart_wishlist.css">
       <!-- fevicon -->
       <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
@@ -31,42 +36,74 @@
    </head>
    <!-- body -->
    <body class="main-layout position_head">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="../../images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
-      <header>
       <?php 
          include("../includes/navbar.php");
       ?> 
-      <!-- Our shop section -->
-      <div id="about" class="shop">
-         <div class="container-fluid">
+      <!-- end header inner -->
+      <!-- Our  Glasses section -->
+      <div class="glasses">
+         <div class="container">
             <div class="row">
-               <div class="col-md-5">
-                  <div  class="shop_img">
-                     <figure><img src="../../images/shop_img.png" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-7 padding_right0">
-                  <div class="max_width">
-                     <div class="titlepage">
-                        <h2>Best SunGlasses  At Our shop</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                        <a class="read_more" href="#">Shop Now</a>
-                     </div>
+               <div class="col-md-10 offset-md-1">
+                  <div class="titlepage">
+                     <h2>My Cart</h2>
                   </div>
                </div>
             </div>
          </div>
+         <div class="container-fluid">
+            <div class="row">
+         <?php
+         $username = $_SESSION['username'];
+         include("../includes/config.php");
+         error_reporting(E_ERROR | E_PARSE);
+         $sql = "SELECT products.id,products.product_name,products.description,products.price,products.product_img,cart.prod_qnty as quantity
+                  FROM products ,cart
+                  WHERE products.id = cart.prod_id
+                  AND cart.username = '$username';";
+         $result = $conn->query($sql);
+         if($_SERVER["REQUEST_METHOD"] == "GET")
+         {  
+            while($row = $result->fetch_assoc()) { 
+               ?>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <div class="glasses_box">
+                     <figure><img src="<?php echo $row['product_img'];?>" alt="#"/></figure>
+                     <h3><span class="blu">$</span><?php echo $row['price'];?></h3>
+                     <p>Product Name: <?php echo $row['product_name'];?></p>
+                     <p>Product Id: <?php echo $row['id'];?></p>
+                     <p><?php echo $row['description'];?></p>
+                     <form action="../logic/buy_cart.php" method="POST">
+                        <div class="qnty_add_cart">
+                           <input type="number" name="quantity" class="form-control" placeholder="Quantity" min="1" max="1000" value="<?php echo $row['quantity'];?>"><br>
+                           <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
+                           <div class="btn-group">
+                                 <button type="submit" class="cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                       <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+                                    </svg>
+                                    <span>Buy</span>
+                                 </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <?php
+         }
+         }
+         mysqli_close($link);
+         ?>
+            </div>
+         </div>
       </div>
-      <!-- end Our shop section -->
+      <!-- end Our  Glasses section -->
       <!--  footer -->
       <?php 
          include("../includes/footer.php");
       ?> 
+      <!-- end footer -->
       <!-- Javascript files-->
       <script src="../../js/jquery.min.js"></script>
       <script src="../../js/popper.min.js"></script>
@@ -77,3 +114,4 @@
       <script src="../../js/custom.js"></script>
    </body>
 </html>
+
