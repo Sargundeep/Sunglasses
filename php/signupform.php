@@ -13,7 +13,7 @@
   <!-- Signup/Signin -->
   <div class="container" id="container">
     <div class="form-container sign-up-container">
-      <form action="../php/signup.php" method="POST">
+      <form action="../php/logic/signup.php" method="POST">
         <h1>Create Account</h1>
         <input type="text" pattern="^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$" placeholder="Username" name="username" required/>
         <input type="email" placeholder="Email" name="email" required/>
@@ -24,7 +24,7 @@
       </form>
     </div>
     <div class="form-container sign-in-container">
-      <form action="../php/login.php" method="POST">
+      <form action="../php/logic/login.php" method="POST">
         <h1>Login</h1>
         <input type="text" placeholder="Username" name="login_username" required/>
         <input type="password" placeholder="Password" name="login_password" required />

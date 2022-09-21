@@ -9,7 +9,7 @@
 <body>
 <?php
 // Include config file
-include("config.php");
+include("includes/config.php");
 
  // Define variables and initialize with empty values
 $name=$_POST["name"];

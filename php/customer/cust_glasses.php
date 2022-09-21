@@ -13,17 +13,17 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../../css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="stylesheet" href="../../css/responsive.css">
       <!-- Add to cart -->
-      <link rel="stylesheet" href="../css/cart_wishlist.css">
+      <link rel="stylesheet" href="../../css/cart_wishlist.css">
       <!-- fevicon -->
-      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -35,11 +35,9 @@
    <body class="main-layout position_head">
       <!-- header -->
       <?php 
-         include("includes/navbar.php");
+         include("../includes/navbar.php");
       ?> 
       <!-- end header inner -->
-
-
       <!-- Our  Glasses section -->
       <div class="glasses">
          <div class="container">
@@ -75,7 +73,7 @@
                      <p>Product Name: <?php echo $row['product_name'];?></p>
                      <p>Product Id: <?php echo $row['id'];?></p>
                      <p><?php echo $row['description'];?></p>
-                     <form action="submit_cart.php" method="POST">
+                     <form action="../logic/submit_cart.php" method="POST">
                         <div class="qnty_add_cart">
                            <input type="number" name="quantity" class="form-control" placeholder="Quantity" min="1" max="1000"><br>
                            <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
@@ -103,17 +101,17 @@
       <!-- end Our  Glasses section -->
       <!--  footer -->
       <?php 
-         include("includes/footer.php");
+         include("../includes/footer.php");
       ?> 
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="../js/jquery.min.js"></script>
-      <script src="../js/popper.min.js"></script>
-      <script src="../js/bootstrap.bundle.min.js"></script>
-      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/bootstrap.bundle.min.js"></script>
+      <script src="../../js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="../js/custom.js"></script>
+      <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../../js/custom.js"></script>
    </body>
 </html>
 

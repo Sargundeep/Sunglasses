@@ -7,7 +7,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="../images/logo.png" alt="#" /></a>
+                              <a href="index.html"><img src="../../images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -20,25 +20,25 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item ">
-                                 <a class="nav-link" href="../templates/cust_index.html">Home</a>
+                                 <a class="nav-link" href="../customer/cust_index.php">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_about.html">About</a>
+                                 <a class="nav-link" href="../customer/cust_about.php">About</a>
                               </li>
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="../php/glasses_customer.php">Our Glasses</a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="../customer/cust_glasses.php">Our Glasses</a>
                               </li> 
                               <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_wishlist.html">Wish List</a>
+                                 <a class="nav-link" href="../customer/cust_about.php">Wish List</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_cart.html">My Cart</a>
+                                 <a class="nav-link" href="../customer/cust_cart.php">My Cart</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../templates/cust_contact.html">Contact Us</a>
+                                 <a class="nav-link" href="../customer/cust_contact.php">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="signup.html">Signup</a>
+                                 <a class="nav-link" href="../signupform.php">Signup</a>
                               </li>
                            </ul>
                         </div>

@@ -17,17 +17,17 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../../css/style.css">
       <!----cart/wishlist css--->
-      <link rel="stylesheet" href="../css/cart_wishlist.css">
+      <link rel="stylesheet" href="../../css/cart_wishlist.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="stylesheet" href="../../css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -36,12 +36,12 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="../../images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
       <?php 
-         include("includes/navbar.php");
+         include("../includes/navbar.php");
       ?> 
       <!-- end header -->
       <!-- banner -->
@@ -58,7 +58,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                      <div class="carousel-caption">
                         <div class="text-bg">
                            <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="../images/banner_img.png" alt="#"/></figure>
+                           <figure><img src="../../images/banner_img.png" alt="#"/></figure>
                            <a class="read_more" href="glasses.html">Shop Now</a>
                         </div>
                      </div>
@@ -69,7 +69,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                      <div class="carousel-caption">
                         <div class="text-bg">
                            <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="../images/banner_img.png" alt="#"/></figure>
+                           <figure><img src="../../images/banner_img.png" alt="#"/></figure>
                            <a class="read_more" href="glasses.html">Shop Now</a>
                            
                         </div>
@@ -81,7 +81,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                      <div class="carousel-caption">
                         <div class="text-bg">
                            <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="../images/banner_img.png" alt="#"/></figure>
+                           <figure><img src="../../images/banner_img.png" alt="#"/></figure>
                            <a class="read_more" href="glasses.html">Shop Now</a>
                         </div>
                      </div>
@@ -103,7 +103,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
             <div class="row d_flex">
                <div class="col-md-5">
                   <div class="about_img">
-                     <figure><img src="../images/about_img.png" alt="#"/></figure>
+                     <figure><img src="../../images/about_img.png" alt="#"/></figure>
                   </div>
                </div>
                <div class="col-md-7">
@@ -135,7 +135,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
             <div class="row">
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass1.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass1.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -150,7 +150,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass2.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass2.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -165,23 +165,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass3.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>50</h3>
-                                          <p>Sunglasses</p>
-                     <div class="btn-group">
-                     <button class="cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                           <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
-                         </svg>
-                        <span>Add to Cart</span>
-
-                     </button>
-                  </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="../images/glass4.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass3.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -197,7 +181,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass5.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass4.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -213,7 +197,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass6.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass5.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -229,7 +213,23 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass7.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass6.png" alt="#"/></figure>
+                     <h3><span class="blu">$</span>50</h3>
+                                          <p>Sunglasses</p>
+                     <div class="btn-group">
+                     <button class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                           <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+                         </svg>
+                        <span>Add to Cart</span>
+
+                     </button>
+                  </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <div class="glasses_box">
+                     <figure><img src="../../images/glass7.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -244,7 +244,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="../images/glass8.png" alt="#"/></figure>
+                     <figure><img src="../../images/glass8.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>50</h3>
                                           <p>Sunglasses</p>
                      <div class="btn-group">
@@ -270,7 +270,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
             <div class="row">
                <div class="col-md-5">
                   <div  class="shop_img">
-                     <figure><img src="../images/shop_img.png" alt="#"/></figure>
+                     <figure><img src="../../images/shop_img.png" alt="#"/></figure>
                   </div>   
                </div>
                <div class="col-md-7 padding_right0">
@@ -288,27 +288,33 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
       <!-- end Our shop section -->
       <!-- clients section -->
       <?php 
-         include("container/testimonial.php");
+         include("../container/testimonial.php");
+         error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
       ?> 
       <!-- end clients section -->
       <!-- contact section -->
       <?php 
-         include("container/contact.php");
+         include("../container/contact.php");
+         error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
       ?> 
       <!-- end contact section -->
       <!--  footer -->
       <?php 
-         include("includes/footer.php");
+         include("../includes/footer.php");
+         error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
       ?> 
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="../js/jquery.min.js"></script>
-      <script src="../js/popper.min.js"></script>
-      <script src="../js/bootstrap.bundle.min.js"></script>
-      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/bootstrap.bundle.min.js"></script>
+      <script src="../../js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="../js/custom.js"></script>
+      <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../../js/custom.js"></script>
       <script>
          // This example adds a marker to indicate the position of Bondi Beach in Sydney,
          // Australia.
@@ -318,7 +324,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
              center: {lat: 40.645037, lng: -73.880224},
              });
          
-         var image = '../images/maps-and-flags.png';
+         var image = '../../images/maps-and-flags.png';
          var beachMarker = new google.maps.Marker({
              position: {lat: 40.645037, lng: -73.880224},
              map: map,

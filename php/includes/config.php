@@ -7,9 +7,9 @@ define('DB_PASSWORD', 'abc123');
 define('DB_NAME', 'sungla');
  
 /* Attempt to connect to MySQL database */
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 // Check connection
-if($link){
+if($conn){
 }
 else{
     die("ERROR: Could not connect. " . mysqli_connect_error());

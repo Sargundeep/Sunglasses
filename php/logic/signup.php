@@ -9,7 +9,7 @@
 <body>
 <?php
 // Include config file
-include("config.php");
+include("includes/config.php");
 
  // Define variables and initialize with empty values
 $username = $_POST['username'];
@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
             if(mysqli_query($link, $sql))
             {
-                header("location: ../templates/signup.html");    
+                header("location: ../admin/signup.html");    
             }
             else
             {
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             }
             }
         else{
-            header("location: ../templates/signup.html");
+            header("location: ../php/customer/cust_index.php");
             echo "<h1>Oops! Please check you password </h1>";
             }
 }

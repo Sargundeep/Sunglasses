@@ -1,14 +1,14 @@
 <?php
 // Initialize the session
 session_start();
-$_SESSION['username'] = "abc";
+$_SESSION['username'] = "";
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../templates/index.html");
+    header("location: ../php/customer/cust_index.php");
     exit();
 }
 // Include config file
-include("config.php"); 
+include("../includes/config.php");
 // Define variables and initialize with empty values
 $username = $_POST["login_username"];
 $password = $_POST["login_password"];
@@ -16,18 +16,18 @@ $hashed_password = md5($password);
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {       
     $sql = "SELECT password FROM users WHERE username = '$username' and password ='$hashed_password'";
-    $result = mysqli_query($link,$sql);
+    $result = mysqli_query($conn,$sql);
     $rows = mysqli_num_rows($result);
     
     if($rows == 1){
         if($username == "Admin" and $password == "abc123sungla")
         {
             $_SESSION['username'] = $username;
-	        header("location: ../templates_admin/index.html");
+	        header("location: ../php/admin/index.php");
         }
         else{
 	        $_SESSION['username'] = "$username";
-	        header("location: ../php/cust_index.php");
+	        header("location: ../customer/cust_index.php");
             exit();
         }
     }
@@ -36,5 +36,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         echo "<h1>$hashed_password</h1>";
     }
 }
-mysqli_close($link);
+mysqli_close($conn);
 ?>
