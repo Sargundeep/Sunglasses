@@ -9,12 +9,11 @@
 <body>
 <?php
 // Include config file
-include("includes/config.php");
+include("../includes/config.php");
 
- // Define variables and initialize with empty values
 $username = $_POST['username'];
 $password = $_POST['password'];
-// $hash_password = password_hash($password, PASSWORD_DEFAULT);
+
 $email = $_POST['email'];
 $confirm_password = $_POST['confirm_password'];
 
@@ -24,9 +23,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($password == $confirm_password){
             $hash_password = md5($password);
             $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
-            if(mysqli_query($link, $sql))
+            if(mysqli_query($conn, $sql))
             {
-                header("location: ../admin/signup.html");    
+                header("location: ../signupform.php");    
             }
             else
             {
@@ -34,11 +33,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             }
             }
         else{
-            header("location: ../php/customer/cust_index.php");
             echo "<h1>Oops! Please check you password </h1>";
             }
 }
-mysqli_close($link);
+mysqli_close($conn);
 ?>
 </body>
 </html>

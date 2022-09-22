@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else{
         echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
-        echo "<h1>$hashed_password</h1>";
+        // echo "<h1>$hashed_password</h1>";
     }
 }
 mysqli_close($conn);

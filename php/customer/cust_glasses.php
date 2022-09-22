@@ -54,11 +54,8 @@
          </div>
          <div class="container-fluid">
             <div class="row">
-         <?php
-         $conn = new mysqli("localhost", "root", "abc123","sungla");
-         if ($conn->connect_error) {
-             die("Connection failed: " . $conn->connect_error);
-         }
+         <?php 
+         include("../includes/config.php");
          error_reporting(E_ERROR | E_PARSE);
          $sql = "SELECT * FROM products";
          $result = $conn->query($sql);
@@ -76,7 +73,7 @@
                      <form action="../logic/submit_cart.php" method="POST">
                         <div class="qnty_add_cart">
                            <input type="number" name="quantity" class="form-control" placeholder="Quantity" min="1" max="1000"><br>
-                           <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
+                           <input type="hidden" name="product_id" id="product_id" class="form-control" value="<?php echo $row['id'];?>"> 
                            <!-- <input type="hidden" name="username" id="" class="form-control" value="">     -->
                            <div class="btn-group">
                                  <button type="submit" class="cart">
@@ -93,7 +90,7 @@
                <?php
          }
          }
-         mysqli_close($link);
+         mysqli_close($conn);
          ?>
             </div>
          </div>

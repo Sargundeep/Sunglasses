@@ -13,17 +13,17 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../../css/style.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="stylesheet" href="../../css/responsive.css">
       <!-- Add to cart -->
-      <link rel="stylesheet" href="../css/cart_wishlist.css">
+      <link rel="stylesheet" href="../../css/cart_wishlist.css">
       <!-- fevicon -->
-      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -35,12 +35,12 @@
    <body class="main-layout position_head">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="../../images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
       <?php 
-         include("includes/navbar.php");
+         include("../includes/navbar.php");
       ?> 
       <!-- end header -->
 
@@ -63,9 +63,9 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glass_add">
                      <figure>
-                        <img src="../images/image 124.svg" class="add_glass">
+                        <img src="../../images/image 124.svg" class="add_glass">
                      </figure>
-                     <a href="../templates_admin/form.html"><figure><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <a href="form.html"><figure><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle r="16.5" transform="matrix(-1 0 0 1 16.5 16.5)" fill="#EEEFF4"/>
                         <path d="M23 17.8571H17.8571V23H16.1429V17.8571H11V16.1429H16.1429V11H17.8571V16.1429H23V17.8571Z" fill="black" fill-opacity="0.54"/>
                         </svg></figure></a>
@@ -117,17 +117,17 @@
       <!-- end Our  Glasses section -->
       <!--  footer -->
       <?php 
-         include("includes/footer.php");
+         include("../includes/footer.php");
       ?> 
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="../js/jquery.min.js"></script>
-      <script src="../js/popper.min.js"></script>
-      <script src="../js/bootstrap.bundle.min.js"></script>
-      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../../js/jquery.min.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/bootstrap.bundle.min.js"></script>
+      <script src="../../js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="../js/custom.js"></script>
+      <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../../js/custom.js"></script>
    </body>
 </html>
 

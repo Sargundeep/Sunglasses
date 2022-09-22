@@ -71,7 +71,6 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
                            <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
                            <figure><img src="../../images/banner_img.png" alt="#"/></figure>
                            <a class="read_more" href="glasses.html">Shop Now</a>
-                           
                         </div>
                      </div>
                   </div>
@@ -297,14 +296,12 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
       <?php 
          include("../container/contact.php");
          error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
       ?> 
       <!-- end contact section -->
       <!--  footer -->
       <?php 
          include("../includes/footer.php");
          error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
       ?> 
       <!-- end footer -->
       <!-- Javascript files-->
