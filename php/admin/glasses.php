@@ -39,9 +39,9 @@
       </div>
       <!-- end loader -->
       <!-- header -->
-      <?php 
-         include("../includes/navbar.php");
-      ?> 
+      <?php
+      include("../includes/navbar_admin.php");
+      ?>
       <!-- end header -->
 
       <!-- Our  Glasses section -->
