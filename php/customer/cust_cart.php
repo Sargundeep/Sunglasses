@@ -86,8 +86,10 @@
                      <p><?php echo $row['description'];?></p>
                      <form action="../logic/buy_cart.php" method="POST">
                         <div class="qnty_add_cart">
-                           <input type="number" name="quantity" class="form-control" placeholder="Quantity" min="1" max="1000" value="<?php echo $row['quantity'];?>"><br>
                            <input type="hidden" name="product_id" id=product_id" class="form-control" value="<?php echo $row['id'];?>"> 
+                           <input type="hidden" name="product_name" class="form-control" value="<?php echo $row['product_name'];?>"><br>
+                           <input type="number" name="product_qty" class="form-control" placeholder="Quantity" min="1" max="1000" value="<?php echo $row['quantity'];?>"><br>
+                           <input type="hidden" name="product_price" id=product_id" class="form-control" value="<?php echo $row['price'];?>"> 
                            <div class="btn-group">
                                  <button type="submit" class="cart">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
