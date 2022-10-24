@@ -11,10 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" href="../../css/invoice.css">
+    <link rel="stylesheet" href="../../css/cart_wishlist.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<a href="cust_cart.php">
+<button type="submit" class="cart">
+<span>Back</span>
+</button>
+</a>
+<br>
+<br>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <?php
     $username = $_SESSION['username'];
@@ -37,10 +45,9 @@
 
         <div class="page-tools">
             <div class="action-buttons">
-                <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="Print">
-                    <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
+                <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
                     Print
-                </a>
+                </button>
             </div>
         </div>
     </div>

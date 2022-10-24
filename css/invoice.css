@@ -5,6 +5,7 @@ body{
 .page_container
 {
     margin: 100px;
+    padding: 20px;
     box-shadow: 0 14px 28px rgb(255 255 255 / 25%), 0 10px 10px rgb(147 138 138 / 22%);
 }
 .text-secondary-d1 {
@@ -23,7 +24,7 @@ body{
     align-items: center;
 }
 .page-title {
-    padding: 0;
+    padding: 20px;
     margin: 0;
     font-size: 1.75rem;
     font-weight: 300;
