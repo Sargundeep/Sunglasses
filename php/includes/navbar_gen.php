@@ -20,25 +20,25 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item ">
-                                 <a class="nav-link" href="../customer/cust_index.php">Home</a>
+                                 <a class="nav-link" href="../generic/gen_index.php">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../customer/cust_about.php">About</a>
+                                 <a class="nav-link" href="../generic/gen_about.php">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../customer/cust_glasses.php">Our Glasses</a>
+                                 <a class="nav-link" href="../generic/gen_glasses.php">Our Glasses</a>
                               </li> 
                               <li class="nav-item">
-                                 <a class="nav-link" href="../customer/cust_about.php">Wish List</a>
+                                 <a class="nav-link" href="../generic/gen_about.php">Wish List</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../customer/cust_cart.php">My Cart</a>
+                                 <a class="nav-link" href="../generic/gen_cart.php">My Cart</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../customer/cust_contact.php">Contact Us</a>
+                                 <a class="nav-link" href="../generic/gen_contact.php">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="../signout.php">Signout</a>
+                                 <a class="nav-link" href="../signupform.php">Signup</a>
                               </li>
                            </ul>
                         </div>

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title></title>
+    <title>company invoice - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" href="../../css/invoice.css">
@@ -42,17 +42,12 @@
                 <i class="fa fa-angle-double-right text-80"></i>
             </small>
         </h1>
-        
+
         <div class="page-tools">
             <div class="action-buttons">
                 <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
                     Print
                 </button>
-                <form>
-                <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
-                    Mail
-                </button>
-                </form>
             </div>
         </div>
     </div>
