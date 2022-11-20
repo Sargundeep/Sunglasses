@@ -1,9 +1,14 @@
 <?php
    session_start();
 ?>
+<!-- <?php
+require_once '../../dompdf/autoload.inc.php';
+use Dompdf\Dompdf;
+$pdf = new Dompdf();
+ob_start();
+?> -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
@@ -14,8 +19,7 @@
     <link rel="stylesheet" href="../../css/cart_wishlist.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
+</head><body>
 <a href="cust_cart.php">
 <button type="submit" class="cart">
 <span>Back</span>
@@ -24,6 +28,7 @@
 <br>
 <br>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
 <?php
     $username = $_SESSION['username'];
     include("../includes/config.php");
@@ -48,8 +53,8 @@
                 <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
                     Print
                 </button>
-                <form>
-                <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
+                <form action="../customer/cust_mail.php">
+                <button class="btn bg-white btn-light mx-1px text-95" data-title="Print">
                     Mail
                 </button>
                 </form>
@@ -180,5 +185,11 @@
 mysqli_close($conn);
 ?>
 
-</body>
-</html>
+</body></html>
+<!-- <?php
+$html=ob_get_clean();
+$pdf->loadhtml($html);
+$pdf->setPaper('A4','landscape');
+$pdf->render();
+$pdf->stream('invoice.pdf', Array('Attachment'=>0));
+?> -->

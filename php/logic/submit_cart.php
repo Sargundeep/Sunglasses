@@ -10,11 +10,7 @@
 <?php
     session_start();
     // Create connection
-    $conn = new mysqli("localhost", "root", "abc123");
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include("../includes/config.php");
     $username = $_SESSION['username'];
     $product_qty = $_POST['quantity'];
     $product_id = $_POST['product_id'];

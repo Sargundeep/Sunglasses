@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($username == "Admin" and $password == "abc123sungla")
         {
             $_SESSION['username'] = $username;
-	        header("location: ../php/admin/index.php");
+	        header("location: ../admin/index.php");
         }
         else{
 	        $_SESSION['username'] = "$username";

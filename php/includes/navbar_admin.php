@@ -36,7 +36,7 @@
                             <a class="nav-link" href="../admin/contact.php">Contact Us</a>
                         </li>
                         <li class="nav-item d_none login_btn">
-                            <a class="nav-link" href="#">Signout</a>
+                            <a class="nav-link" href="../signout.php">Signout</a>
                         </li>
                     </ul>
                 </div>
