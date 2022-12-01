@@ -1,12 +1,6 @@
 <?php
    session_start();
 ?>
-<!-- <?php
-require_once '../../dompdf/autoload.inc.php';
-use Dompdf\Dompdf;
-$pdf = new Dompdf();
-ob_start();
-?> -->
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -186,10 +180,3 @@ mysqli_close($conn);
 ?>
 
 </body></html>
-<!-- <?php
-$html=ob_get_clean();
-$pdf->loadhtml($html);
-$pdf->setPaper('A4','landscape');
-$pdf->render();
-$pdf->stream('invoice.pdf', Array('Attachment'=>0));
-?> -->

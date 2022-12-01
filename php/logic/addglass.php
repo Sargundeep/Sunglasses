@@ -21,7 +21,7 @@ $price = $_POST['price'];
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {   
     $sql = "INSERT INTO products (product_name, description ,product_img , price) VALUES ('$name', '$desc' , '$image','$price')";  
-    if(mysqli_query($conn, $sql))
+    if(mysqli_query($link, $sql))
     {
         header("location: ../admin/glasses.php");    
     }
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
     }
 }
-mysqli_close($conn);
+mysqli_close($link);
 ?>
 </body>
 </html>

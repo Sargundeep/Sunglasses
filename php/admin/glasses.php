@@ -76,13 +76,9 @@
 
          <?php
          // Create connection
-         $conn = new mysqli("localhost", "root", "","sungla");
-     
-         // Check connection
-         if ($conn->connect_error) {
-             die("Connection failed: " . $conn->connect_error);
-         }
-         error_reporting(E_ERROR | E_PARSE);
+         include("../includes/config.php");
+         ?>
+         
          $sql = "SELECT * FROM products";
      
          $result = $conn->query($sql);
@@ -107,8 +103,6 @@
                   </div>
                </div>
                <?php
-         }
-         }
          mysqli_close($link);
          ?>
             </div>

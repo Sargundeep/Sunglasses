@@ -2,7 +2,7 @@
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'abc123');
+define('DB_PASSWORD', 'root');
 define('DB_NAME', 'sungla');
  
 /* Attempt to connect to MySQL database */
