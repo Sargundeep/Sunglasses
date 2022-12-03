@@ -28,7 +28,7 @@
         <h1>Login</h1>
         <input type="text" placeholder="Username" name="login_username" required/>
         <input type="password" placeholder="Password" name="login_password" required />
-        <a href="#">Forgot your password?</a>
+        <a href="../php/forgotpassword.php">Forgot your password?</a>
         <button>Login</button>
       </form>
     </div>
@@ -36,7 +36,7 @@
       <div class="overlay">
         <div class="overlay-panel overlay-left">
           <div class="logo">
-            <img src="../images/logo.png" alt="#" />
+            <img src="../images/logo.png" alt="#"/>
          </div>
           <h1>Welcome Back!</h1>
           <p>To keep connected with us please login with your personal info</p>

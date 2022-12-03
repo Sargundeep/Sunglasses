@@ -58,7 +58,7 @@
          include("../includes/config.php");
          error_reporting(E_ERROR | E_PARSE);
          $sql = "SELECT * FROM products";
-         $result = $link->query($sql);
+         $result = $conn->query($sql);
          if($_SERVER["REQUEST_METHOD"] == "GET")
          {  
             while($row = $result->fetch_assoc()) { 
@@ -90,7 +90,7 @@
                <?php
          }
          }
-         mysqli_close($link);
+         mysqli_close($conn);
          ?>
             </div>
          </div>

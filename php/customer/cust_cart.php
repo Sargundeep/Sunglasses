@@ -42,16 +42,6 @@
       ?> 
       <!-- end header inner -->
       <!-- Our  Glasses section -->
-      <form action="../logic/buy_all_cart.php" method="POST">   
-         <div class="btn-group">
-               <button type="submit" class="cart">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                     <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
-                  </svg>
-                  <span>Buy All</span>
-               </button>
-         </div>
-      </form>
       <div class="glasses">
          <div class="container">
             <div class="row">
@@ -73,7 +63,27 @@
                   WHERE products.id = cart.prod_id
                   AND cart.username = '$username';";
          $result = $conn->query($sql);
-         if($_SERVER["REQUEST_METHOD"] == "GET")
+         $result2 = mysqli_query($conn,$sql);
+         $rows1 = mysqli_num_rows($result);
+         if($rows1 == 0)
+         {
+            echo '<div class="cart_empty">
+               <figure>
+                  <img src="../../images/image 124.svg" class="add_glass">
+               </figure>  
+               <form action="../customer/cust_glasses.php" method="POST">  
+               <button type="submit" class="cart">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                     <path d="M19.029 13h2.971l-.266 1h-2.992l.287-1zm.863-3h2.812l.296-1h-2.821l-.287 1zm-.576 2h4.387l.297-1h-4.396l-.288 1zm2.684-9l-.743 2h-1.929l-3.474 12h-11.239l-4.615-11h14.812l-.564 2h-11.24l2.938 7h8.428l3.432-12h4.194zm-14.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm5.9-7-.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+                  </svg>
+                  <span>Shop Now</span>
+               </button>
+               </form>
+            </div>';
+         }
+         else
+         {
+            if($_SERVER["REQUEST_METHOD"] == "GET")
          {  
             while($row = $result->fetch_assoc()) { 
                ?>
@@ -105,18 +115,17 @@
                   </div>
                </div>
                <?php
+               }
          }
          }
-         mysqli_close($link);
+         mysqli_close($conn);
          ?>
             </div>
          </div>
       </div>
       <!-- end Our  Glasses section -->
       <!--  footer -->
-      <?php 
-         include("../includes/footer.php");
-      ?> 
+
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="../../js/jquery.min.js"></script>

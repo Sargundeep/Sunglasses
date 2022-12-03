@@ -29,7 +29,12 @@
 @import url(css/nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-
+.cart_empty{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+}
 * {
      box-sizing: border-box !important;
 }
@@ -870,7 +875,7 @@ ul.location_icon li a {
      border: 0.1rem solid #fff;
      border-radius: 15px;
      box-shadow: -1px 0px 14px 2px #c9c4c4;
-     backdrop-filter: blur(10px);
+     /* backdrop-filter: blur(10px); */
      transition: all .5s ease-in-out;
  }
 
@@ -883,7 +888,7 @@ ul.location_icon li a {
      padding: .5em;
      border: .1rem solid rgb(106, 222, 245);
      border-radius: 15px;
-     backdrop-filter: blur(10px);
+     /* backdrop-filter: blur(10px); */
      color: #054875; 
      background-color: rgb(249, 255, 255); 
  }

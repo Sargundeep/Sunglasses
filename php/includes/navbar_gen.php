@@ -28,9 +28,9 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="../generic/gen_glasses.php">Our Glasses</a>
                               </li> 
-                              <li class="nav-item">
+                              <!-- <li class="nav-item">
                                  <a class="nav-link" href="../generic/gen_about.php">Wish List</a>
-                              </li>
+                              </li> -->
                               <li class="nav-item">
                                  <a class="nav-link" href="../generic/gen_cart.php">My Cart</a>
                               </li>

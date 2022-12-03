@@ -47,10 +47,11 @@
                 <button class="btn bg-white btn-light mx-1px text-95" data-title="Print" onclick="window.print()">
                     Print
                 </button>
-                <form action="../customer/cust_mail.php">
-                <button class="btn bg-white btn-light mx-1px text-95" data-title="Print">
-                    Mail
-                </button>
+                <form action="#" method="POST">
+                    <button class="btn bg-white btn-light mx-1px text-95" data-title="Print">
+                        Mail
+                    </button>
+                    <input type="hidden" name="username" id="username" class="form-control" value="<?php echo $row['username'];?>"> 
                 </form>
             </div>
         </div>

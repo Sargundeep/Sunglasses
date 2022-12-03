@@ -60,10 +60,14 @@
                      <figure>
                         <img src="../../images/image 124.svg" class="add_glass">
                      </figure>
-                     <a href="../admin/form.php"><figure><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="16.5" transform="matrix(-1 0 0 1 16.5 16.5)" fill="#EEEFF4"/>
-                        <path d="M23 17.8571H17.8571V23H16.1429V17.8571H11V16.1429H16.1429V11H17.8571V16.1429H23V17.8571Z" fill="black" fill-opacity="0.54"/>
-                        </svg></figure></a>
+                     <a href="../admin/form.php">
+                        <figure>
+                           <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <circle r="16.5" transform="matrix(-1 0 0 1 16.5 16.5)" fill="#EEEFF4"/>
+                           <path d="M23 17.8571H17.8571V23H16.1429V17.8571H11V16.1429H16.1429V11H17.8571V16.1429H23V17.8571Z" fill="black" fill-opacity="0.54"/>
+                           </svg>
+                        </figure>
+                     </a>
                      <p>Add more for others to see ur store :)</p>
                   </div>
                </div>
@@ -96,9 +100,7 @@
                   </div>
                </div>
                <?php
-               mysqli_close($link);
-            }
-            
+            }           
          }
          
          ?>

@@ -28,9 +28,9 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="../customer/cust_glasses.php">Our Glasses</a>
                               </li> 
-                              <li class="nav-item">
+                              <!-- <li class="nav-item">
                                  <a class="nav-link" href="../customer/cust_about.php">Wish List</a>
-                              </li>
+                              </li> -->
                               <li class="nav-item">
                                  <a class="nav-link" href="../customer/cust_cart.php">My Cart</a>
                               </li>
