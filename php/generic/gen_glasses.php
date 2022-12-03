@@ -96,10 +96,7 @@
          </div>
       </div>
       <!-- end Our  Glasses section -->
-      <!--  footer -->
-      <?php 
-         include("../includes/footer.php");
-      ?> 
+      <!--  footer --> 
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="../../js/jquery.min.js"></script>

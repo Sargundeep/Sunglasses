@@ -33,11 +33,6 @@
    </head>
    <!-- body -->
    <body class="main-layout position_head">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="../../images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
       <?php
       include("../includes/navbar_admin.php");
@@ -77,8 +72,6 @@
          <?php
          // Create connection
          include("../includes/config.php");
-         ?>
-         
          $sql = "SELECT * FROM products";
      
          $result = $conn->query($sql);
@@ -103,7 +96,11 @@
                   </div>
                </div>
                <?php
-         mysqli_close($link);
+               mysqli_close($link);
+            }
+            
+         }
+         
          ?>
             </div>
          </div>
