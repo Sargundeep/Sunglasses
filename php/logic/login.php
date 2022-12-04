@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $rows = mysqli_num_rows($result);
     
     if($rows == 1){
-        if($username == "Admin" and $password == "admin123")
+        if($username == "Admin" and $password == "Admin123")
         {
             $_SESSION['username'] = $username;
             $_SESSION["loggedin"] = true;
@@ -34,7 +34,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         }
     }
     else{
-        echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
+        echo "<script>alert(Username or Password is incorrect.Please try again.)<script>";
+        header("location: ../signupform.php");
         // echo "<h1>$hashed_password</h1>";
     }
 }
