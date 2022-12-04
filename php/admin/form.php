@@ -1,3 +1,10 @@
+<?php
+if($_SESSION['username']  != "Admin") {
+   header("location: ../signupform.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
