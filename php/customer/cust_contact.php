@@ -45,22 +45,22 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" method="POST" action=""> 
                      <div class="row">
                         <div class="col-md-12 ">
                            <h3>Contact Us</h3>
                         </div>
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Name" type="text" name="Name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
+                           <input class="contactus" placeholder="Phone Number" type="text" name="Phone Number"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                           <input class="contactus" placeholder="Email" type="email" name="Email">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
+                           <input class="contactusmess" placeholder="Message" type="text" Message="Name">
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Send</button>
