@@ -28,14 +28,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             else
             {
                 echo '<script>alert(Oops! Something went wrong. Please try again later<script>';
+                header("location: ../forgotpassword.php");
             }
             }
         else{
             echo '<script>alert(Oops! Please check your Password<script>';
+            header("location: ../forgotpassword.php");
             }
     }
     else{
         echo '<script>alert(Oops! Please enter valid username<script>';
+        header("location: ../forgotpassword.php");
     }
 }}
 mysqli_close($conn);
