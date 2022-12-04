@@ -3,10 +3,10 @@
 session_start();
 $_SESSION['username'] = "";
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../customer/cust_index.php");
-    exit();
-}
+// if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//     header("location: ../customer/cust_index.php");
+//     exit();
+// }
 // Include config file
 include("../includes/config.php");
 // Define variables and initialize with empty values
@@ -16,6 +16,7 @@ $hashed_password = md5($password);
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {       
     $sql = "SELECT password FROM users WHERE username = '$username' and password ='$hashed_password'";
+    // echo $username;
     $result = mysqli_query($conn,$sql);
     $rows = mysqli_num_rows($result);
     
@@ -37,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else{
         echo "<script>alert(Username or Password is incorrect.Please try again.)<script>";
-        header("location: ../signupform.php");
+        header("location: ../signupform.php?ErrorId=1");
         // echo "<h1>$hashed_password</h1>";
     }
 }

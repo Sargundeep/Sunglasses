@@ -1,7 +1,8 @@
 <?php
-if($_SESSION['username']  != "Admin") {
-   header("location: ../signupform.php");
-}
+// echo $_SESSION['username'];
+// if($_SESSION['username']  != "Admin") {
+//    header("location: ../signupform.php");
+// }
 ?>
 
 

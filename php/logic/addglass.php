@@ -14,7 +14,7 @@ include("../includes/config.php");
  // Define variables and initialize with empty values
 $name=$_POST["name"];
 $desc = $_POST['desc'];
-$image = $_POST['img_conn'];
+$image = $_POST['img_link'];
 $price = $_POST['price'];
 
 // Processing form data when form is submitted
