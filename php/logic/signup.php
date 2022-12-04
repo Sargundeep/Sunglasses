@@ -19,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     else{ 
     if($password == $confirm_password){
         $hash_password = md5($password);
+        // $hash_password = $password;
         $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
         if(mysqli_query($conn, $sql))
         {

@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $rows = mysqli_num_rows($result);
     
     if($rows == 1){
-        if($username == "Admin" and $password == "admin123")
+        if($username == "Admin" and $password == "Admin123")
         {
             $_SESSION['username'] = $username;
 	        header("location: ../admin/index.php");
