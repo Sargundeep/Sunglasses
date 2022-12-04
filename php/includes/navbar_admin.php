@@ -32,9 +32,9 @@
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="../admin/cart.php">My Cart</a>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="../admin/contact.php">Contact Us</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item d_none login_btn">
                             <a class="nav-link" href="../signout.php">Signout</a>
                         </li>
