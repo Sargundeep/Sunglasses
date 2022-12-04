@@ -23,10 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($username == "Admin" and $password == "Admin123")
         {
             $_SESSION['username'] = $username;
+            $_SESSION["loggedin"] = true;
 	        header("location: ../admin/index.php");
         }
         else{
 	        $_SESSION['username'] = "$username";
+            $_SESSION["loggedin"] = true;
 	        header("location: ../customer/cust_index.php");
             exit();
         }
