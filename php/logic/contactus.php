@@ -4,9 +4,8 @@ include("../includes/config.php");
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-
 $email = $_POST['email'];
-$confirm_password = $_POST['confirm_password'];
+$message = $_POST['message'];
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")

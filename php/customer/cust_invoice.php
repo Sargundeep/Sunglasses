@@ -1,10 +1,11 @@
 <?php
 session_start();
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-
-if ($_SESSION["loggedin"] === true) {
-    header("location: ../signupform.php");
+if ($_SESSION["loggedin"] === false) {
+   header("location: ../signupform.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

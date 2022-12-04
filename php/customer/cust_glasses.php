@@ -1,7 +1,10 @@
 <?php
-if ($_SESSION["loggedin"] === true) {
-   header("location: ../signupform.php");
-}
+session_start();
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+echo "123".$_SESSION["loggedin"];
+// if (isset($_SESSION["loggedin"]) === false) {
+//    header("location: ../signupform.php");
+// }
 ?>
 
 <!DOCTYPE html>

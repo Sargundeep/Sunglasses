@@ -4,7 +4,7 @@ session_start();
 $_SESSION['username'] = "";
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../php/customer/cust_index.php");
+    header("location: ../customer/cust_index.php");
     exit();
 }
 // Include config file
@@ -27,9 +27,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	        header("location: ../admin/index.php");
         }
         else{
-	        $_SESSION['username'] = "$username";
+	        $_SESSION['username'] = $username;
             $_SESSION["loggedin"] = true;
 	        header("location: ../customer/cust_index.php");
+            echo "$username";
+            echo "$password";
             exit();
         }
     }

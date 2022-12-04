@@ -1,9 +1,3 @@
-<?php
-if ($_SESSION["loggedin"] === true) {
-	header("location: ../signupform.php");
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
