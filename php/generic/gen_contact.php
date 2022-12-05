@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -31,15 +32,12 @@
    </head>
    <!-- body -->
    <body class="main-layout position_head">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="../../images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
-      <?php 
-         include("../includes/navbar_gen.php");
-      ?> 
+      <?php
+      include("../includes/navbar_admin.php");
+      ?>
+      <!-- end header inner -->
+      <!-- end header -->
       <!-- contact section -->
       <div id="contact" class="contact">
          <div class="container">
@@ -51,19 +49,19 @@
                            <h3>Contact Us</h3>
                         </div>
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Name" type="text" name="name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
+                           <input class="contactus" placeholder="Phone Number" type="text" name="phone"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                           <input class="contactus" placeholder="Email" type="email" name="email">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
+                           <input class="contactusmess" placeholder="Please Enter Feedback" type="text" name="message">
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <button class="send_btn" >Send</button>
                         </div>
                      </div>
                   </form>
@@ -80,18 +78,18 @@
       </div>
       <!-- end contact section -->
       <!--  footer -->
-      <?php 
-         include("../includes/footer.php");
-      ?> 
+      <?php
+      include("../includes/footer.php");
+      ?>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="../../js/jquery.min.js"></script>
-      <script src="../../js/popper.min.js"></script>
-      <script src="../../js/bootstrap.bundle.min.js"></script>
-      <script src="../../js/jquery-3.0.0.min.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="../js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="../../js/custom.js"></script>
+      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../js/custom.js"></script>
       <script>
          // This example adds a marker to indicate the position of Bondi Beach in Sydney,
          // Australia.
@@ -101,7 +99,7 @@
              center: {lat: 40.645037, lng: -73.880224},
              });
          
-         var image = '../../images/maps-and-flags.png';
+         var image = '../images/maps-and-flags.png';
          var beachMarker = new google.maps.Marker({
              position: {lat: 40.645037, lng: -73.880224},
              map: map,

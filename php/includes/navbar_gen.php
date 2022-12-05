@@ -32,10 +32,10 @@
                                  <a class="nav-link" href="../generic/gen_about.php">Wish List</a>
                               </li> -->
                               <li class="nav-item">
-                                 <a class="nav-link" href="../generic/gen_cart.php">My Cart</a>
+                                 <a class="nav-link" href="../signout.php">My Cart</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="../generic/gen_contact.php">Contact Us</a>
+                                 <a class="nav-link" href="../signout.php">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
                                  <a class="nav-link" href="../signupform.php">Signup</a>

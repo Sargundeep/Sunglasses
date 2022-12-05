@@ -2,37 +2,24 @@
 // Include config file
 include("../includes/config.php");
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['name'];
+$phone = $_POST['phone'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {   
-    if((!strlen($username)>1 || (!preg_match("/^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/",$username)) || !strlen($password)>6) || (!preg_match("/^[0-9a-zA-Z]*$/",$password)))
+    $sql = "INSERT INTO contact_us(name, email ,phone,message) VALUES ('$username', '$email' ,'$phone', '$message')";  
+    if(mysqli_query($conn, $sql))
     {
-        echo '<script>alert("Enter valid username and password")</script>';
-        header("location: ../signupform.php");  
+        header("location: ../customer/cust_contact.php");    
     }
-    else{ 
-    if($password == $confirm_password){
-        $hash_password = md5($password);
-        // $hash_password = $password;
-        $sql = "INSERT INTO users (username, email ,password) VALUES ('$username', '$email' , '$hash_password')";  
-        if(mysqli_query($conn, $sql))
-        {
-            header("location: ../signupform.php");    
-        }
-        else
-        {
-            echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
-        }
-        }
-    else{
-        echo "<h1>Oops! Please check you password </h1>";
-        }
+    else
+    {
+        echo "<h1>Oops! Something went wrong. Please try again later.</h1>";
     }
 }
+
 mysqli_close($conn);
 ?>
