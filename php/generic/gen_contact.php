@@ -38,45 +38,9 @@
       ?>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- contact section -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <h3>Contact Us</h3>
-                        </div>
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="text" name="name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="text" name="phone"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="email" name="email">                          
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Please Enter Feedback" type="text" name="message">
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn" >Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid">
-            <div class="map_section">
-               <div id="map">
-               </div>
-            </div>
-         </div>
-      </div>
-      </div>
-      <!-- end contact section -->
+      <?php
+      include("../includes/contact_us.php");
+      ?>
       <!--  footer -->
       <?php
       include("../includes/footer.php");
@@ -107,6 +71,7 @@
            });
          }
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
       <!-- google map js -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
       <!-- end google map js --> 
