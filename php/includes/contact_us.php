@@ -18,7 +18,7 @@
                            <input class="contactus" placeholder="Email" type="email" name="email">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Please Enter Feedback" type="text" name="message">
+                           <input class="contactusmess" placeholder="Ask Us" type="text" name="message">
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn" >Send</button>
