@@ -50,15 +50,13 @@ require 'vendor/autoload.php';
        $mail->Body    = $msg; 
        $mail->AltBody = 'Experiment finally successfully'; 
        $mail->send(); 
-       echo "Mail has been sent successfully!"; 
+       $chk = "INSERT INTO sungla.order_details (username,product_id,product_name,product_price,product_qty,total_price,tax,grand_total) VALUES ('$username','$product_id','$product_name','$product_price','$product_qty','$total_price','$tax','$grand_total')"; 
+       $result=$conn->query($chk);
+       header("location: ../customer/cust_invoice.php");
+       mysqli_close($conn);  
    } catch (Exception $e) { 
        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
    }
     
-       
-    $chk = "INSERT INTO sungla.order_details (username,product_id,product_name,product_price,product_qty,total_price,tax,grand_total) VALUES ('$username','$product_id','$product_name','$product_price','$product_qty','$total_price','$tax','$grand_total')"; 
-    $result=$conn->query($chk);
-    header("location: ../customer/cust_invoice.php");
-    mysqli_close($conn);  
  
    ?>
