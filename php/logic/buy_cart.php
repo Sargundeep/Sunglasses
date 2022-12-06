@@ -17,39 +17,40 @@ require 'vendor/autoload.php';
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $rec = $row['email'];
-    $mail = new PHPMailer(true); 
+    // $mail = new PHPMailer(true); 
         
-    $sender = "sargundeepkaur.s@somaiya.edu"; 
-    $password = "SARGUN165"; 
-    $msg = "Your Order Is Placed Successfully.Thank You for Shopping with us."."\n"."
-            Your Order Details are as follows:"."\n"." 
-                Product Name: $product_name"."\n"."
-                Product Quantity: $product_qty"."\n"."
-                Product Price: $product_price "."\n"."
-                Total Price: $total_price "."\n"."
-                Tax: $tax "."\n"."
-                Grand Total: $grand_total"; 
-    $sub = "Order Confirmation"; 
-    $name = "Sungla"; 
+    // $sender = "$sender_email";  // enter sender email address
+    // $password = "$password";  //e enter sender email password
+    // $msg = "Your Order Is Placed Successfully.Thank You for Shopping with us."."\n"."
+    //         Your Order Details are as follows:"."\n"." 
+    //             Product Name: $product_name"."\n"."
+    //             Product Quantity: $product_qty"."\n"."
+    //             Product Price: $product_price "."\n"."
+    //             Total Price: $total_price "."\n"."
+    //             Tax: $tax "."\n"."
+    //             Grand Total: $grand_total"; 
+    // $sub = "Order Confirmation"; 
+    // $name = "Sungla"; 
    
    try { 
-       $mail->SMTPDebug = 2;                                        
-       $mail->isSMTP();                                                
-       $mail->Host       = 'smtp.gmail.com';                     
-       $mail->SMTPAuth   = true;                              
-       $mail->Username   = $sender;   
-       $mail->Password   = $password;   
-       $mail->SMTPSecure = 'tls';                                
-       $mail->Port       = 587;   
+    // uncomment this part to sent the mail to the user
+    //    $mail->SMTPDebug = 2;                                        
+    //    $mail->isSMTP();                                                
+    //    $mail->Host       = 'smtp.gmail.com';                     
+    //    $mail->SMTPAuth   = true;                              
+    //    $mail->Username   = $sender;   
+    //    $mail->Password   = $password;   
+    //    $mail->SMTPSecure = 'tls';                                
+    //    $mail->Port       = 587;   
       
-       $mail->setFrom($sender, $name);            
-       $mail->addAddress($rec); 
+    //    $mail->setFrom($sender, $name);            
+    //    $mail->addAddress($rec); 
            
-       $mail->isHTML(true);                                   
-       $mail->Subject = $sub; 
-       $mail->Body    = $msg; 
-       $mail->AltBody = 'Experiment finally successfully'; 
-       $mail->send(); 
+    //    $mail->isHTML(true);                                   
+    //    $mail->Subject = $sub; 
+    //    $mail->Body    = $msg; 
+    //    $mail->AltBody = 'Order Confirmation'; 
+    //    $mail->send(); 
        $chk = "INSERT INTO sungla.order_details (username,product_id,product_name,product_price,product_qty,total_price,tax,grand_total) VALUES ('$username','$product_id','$product_name','$product_price','$product_qty','$total_price','$tax','$grand_total')"; 
        $result=$conn->query($chk);
        header("location: ../customer/cust_invoice.php");
