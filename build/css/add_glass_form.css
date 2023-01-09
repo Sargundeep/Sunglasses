@@ -1,0 +1,100 @@
+body{
+    background: linear-gradient(to right, #5fbfff, #71fffa);
+}
+section{
+    margin-top:10em;
+}
+h1
+{
+	align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+a{
+	color:white;
+}
+.signupbtn
+{
+	cursor:pointer;
+	align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+	width: 20%;
+	padding: .5em;
+	color: #e6f5ff;
+	border-radius:12px ;
+	border: .1rem solid rgb(106, 222, 245);
+	background-color: #06395b;
+}
+.signupbtn signup{
+	width:40%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+	gap:2rem;
+    margin:auto;
+    padding: 2rem ;
+    background-color: rgba(250, 250, 250, 0.543);
+    border: .1rem solid #fff;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all .5s ease-in-out;
+}
+
+form:hover{
+    background-color: rgba(250, 250, 250, 0.994);
+    transition: all .5s ease-in-out;
+}
+
+.form_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    width: 100%;
+}
+
+.form_div input
+{
+    width: 100%;
+}
+
+input{
+    padding: .5em;
+    border: .1rem solid rgb(106, 222, 245);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: #054875; 
+    background-color: rgb(249, 255, 255); 
+}
+
+label{
+    font-size: .95em;
+    color: #054875;
+}
+
+input:focus{
+    outline: none;
+}
+/*
+button{
+	width: 40%;
+	padding: .5em;
+	color: #e6f5ff;
+	border-radius:12px ;
+	border: .1rem solid rgb(106, 222, 245);
+	background-color: #06395b;
+}
+*/
